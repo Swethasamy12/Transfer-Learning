@@ -2,20 +2,29 @@
 ## Aim
 To Implement Transfer Learning for classification using VGG-19 architecture.
 ## Problem Statement and Dataset
-Develop an image classification model using transfer learning with the pre-trained VGG-19 model. 
+Image classification from scratch requires a huge dataset and long training times. To overcome this, transfer learning can be applied using pre-trained models like VGG-19, which has already learned feature representations from a large dataset (ImageNet).
+
+Problem Statement: Build an image classifier using VGG-19 pre-trained architecture, fine-tuned for a custom dataset (e.g., CIFAR-10, Flowers dataset, or any small image dataset). Dataset: A dataset consisting of multiple image classes (e.g., train, test, and validation sets). For example, CIFAR-10 (10 classes of small images) or a custom dataset with multiple classes.
 
 ## DESIGN STEPS
-STEP 1: Import required libraries, load the dataset, and define training & testing datasets.
+STEP 1:
+Import required libraries, load the dataset, and define training & testing datasets.
 
-STEP 2: Initialize the model, loss function, and optimizer. Use CrossEntropyLoss for multi-class classification and Adam optimizer for efficient training.
+STEP 2:
+Initialize the model, loss function, and optimizer. Use CrossEntropyLoss for multi-class classification and Adam optimizer for efficient training.
 
-STEP 3: Train the model using the training dataset with forward and backward propagation.
+STEP 3:
+Train the model using the training dataset with forward and backward propagation.
 
-STEP 4: Evaluate the model on the testing dataset to measure accuracy and performance.
+STEP 4:
+Evaluate the model on the testing dataset to measure accuracy and performance.
 
-STEP 5: Make predictions on new data using the trained model
+STEP 5:
+Make predictions on new data using the trained model
 
 ## PROGRAM
+Include your code here
+```
 # Load Pretrained Model and Modify for Transfer Learning
 
 from torchvision.models import VGG19_Weights
@@ -75,32 +84,25 @@ def train_model(model, train_loader,test_loader,num_epochs=10):
     plt.legend()
     plt.show()
 
+```
 
 ## OUTPUT
 ### Training Loss, Validation Loss Vs Iteration Plot
-Include your plot here
-</br>
-</br>
-</br>
+
+<img width="730" height="722" alt="Screenshot 2026-03-24 121957" src="https://github.com/user-attachments/assets/519ec98e-2abd-497a-ae7a-619207683ca5" />
+
 
 ### Confusion Matrix
-Include confusion matrix here
-</br>
-</br>
-</br>
+<img width="656" height="768" alt="Screenshot 2026-03-24 122011" src="https://github.com/user-attachments/assets/21ce4a6e-65e9-4167-a353-f24f68fe8e28" />
+
 
 ### Classification Report
-Include Classification Report here
-</br>
-</br>
-</br>
+<img width="406" height="378" alt="Screenshot 2026-03-24 122023" src="https://github.com/user-attachments/assets/da2457cf-6dd8-4506-a55e-0170b2157a73" />
+
 
 ### New Sample Prediction
-</br>
-</br>
-</br>
+
+<img width="410" height="375" alt="Screenshot 2026-03-24 122037" src="https://github.com/user-attachments/assets/67007b33-5576-4ddd-9399-be3523e979ec" />
 
 ## RESULT
-</br>
-</br>
-</br>
+Thus, the Transfer Learning for classification using the VGG-19 architecture has been successfully implemented.
